@@ -6,6 +6,19 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+SET (CMAKE_C_FLAGS_INIT                "-Wall -std=c11")
+SET (CMAKE_C_FLAGS_DEBUG_INIT          "-g")
+SET (CMAKE_C_FLAGS_MINSIZEREL_INIT     "-Os -DNDEBUG")
+SET (CMAKE_C_FLAGS_RELEASE_INIT        "-O3 -DNDEBUG")
+SET (CMAKE_C_FLAGS_RELWITHDEBINFO_INIT "-O2 -g")
+
+SET (CMAKE_CXX_FLAGS_INIT                "-Wall -std=c++14")
+SET (CMAKE_CXX_FLAGS_DEBUG_INIT          "-g")
+SET (CMAKE_CXX_FLAGS_MINSIZEREL_INIT     "-Os -DNDEBUG")
+SET (CMAKE_CXX_FLAGS_RELEASE_INIT        "-O3 -DNDEBUG")
+SET (CMAKE_CXX_FLAGS_RELWITHDEBINFO_INIT "-O2 -g")
+set(CMAKE_BUILD_TYPE Debug)
+
 include(FetchContent)
 FetchContent_Declare(
   googletest
@@ -20,6 +33,7 @@ enable_testing()
 add_executable(
   hello_test
   hello_test.cc
+  some_module.c
 )
 target_link_libraries(
   hello_test
