@@ -17,3 +17,11 @@ Modulator_t *New() {
   modulator->state = state;
   return (Modulator_t *)modulator;
 }
+
+#ifdef SOME_IMPLEMENATAION
+#include <stdio.h>
+void some_func(void) {
+  printf("somefunc");
+  return;
+}
+#endif /* ifdef MACRO */

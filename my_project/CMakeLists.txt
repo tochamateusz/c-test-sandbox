@@ -34,6 +34,7 @@ add_executable(
   hello_test
   hello_test.cc
   some_module.c
+  some_module2.c
 )
 target_link_libraries(
   hello_test

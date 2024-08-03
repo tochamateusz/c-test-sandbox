@@ -5,3 +5,6 @@ typedef struct Modulator {
 } Modulator_t;
 
 Modulator_t *New();
+
+void some_func(void);
+#define SOME_IMPLEMENATAION
